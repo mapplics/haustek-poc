@@ -130,8 +130,8 @@ const Tools = () => {
 
 
             <div className="mt-2  w-full flex flex-col">
-                <label className="font-semibold">Dimensiones ventana</label>
-                <div className="flex flex-row">
+                <label className="font-semibold text-stone-800">Dimensiones ventana</label>
+                <div className="flex flex-row ml-4">
                     <div className="w-full flex flex-col">
 
                         <label className="text-gray-500">Alto</label>
@@ -147,16 +147,16 @@ const Tools = () => {
             </div>
 
             <div className="mt-2 w-full flex flex-col">
-                <label className="font-semibold">Alturas del marco</label>
-                <div className="flex flex-row">
+                <label className="font-semibold text-stone-800">Alturas del marco</label>
+                <div className="flex flex-row  ml-4">
                     <input className="btn w-full" type='number' min={1} max={30} value={frameHeight} onChange={onFrameHeightChange} />
                     <input className="ml-4 btn w-full" type='number' min={1} max={30} value={internalFrameHeight} onChange={onInternalFrameHeightChange} />
                 </div>
             </div>
 
             <div className="mt-2 w-full flex flex-col">
-                <label className="font-semibold">Secciones</label>
-                <div className="flex flex-row">
+                <label className="font-semibold text-stone-800">Secciones</label>
+                <div className="flex flex-row  ml-4">
                     <div className="w-full flex flex-col">
 
                         <label className="text-gray-500"> Horizontales</label>
@@ -174,13 +174,13 @@ const Tools = () => {
             {
                 windowModel?.components && windowModel.components.length > 0 &&
                 <div className="mt-2 w-full flex flex-col overflow-y-hidden">
-                    <label className="mb-1 font-semibold w-full">Componentes</label>
+                    <label className="mb-1 font-semibold w-full text-stone-800">Componentes</label>
 
-                    <div className="flex flex-col overflow-y-auto">
+                    <div className="flex flex-col overflow-y-auto  ml-4">
                         {
                             externalSides && externalSides.length > 0 &&
                             <div>
-                                <div className="font-semibold">Lados exteriores</div>
+                                <div className="font-semibold text-gray-700">Lados exteriores</div>
                                 {externalSides.map((component) => <WindowComponent key={component.id} component={component} />)}
                             </div>
                         }
@@ -188,7 +188,7 @@ const Tools = () => {
                         {
                             verticalCrossbars && verticalCrossbars.length > 0 &&
                             <div>
-                                <div className="font-semibold mt-1">Travesaños verticales</div>
+                                <div className="font-semibold mt-1 text-gray-700">Travesaños verticales</div>
                                 {verticalCrossbars.map((component) => <WindowComponent key={component.id} component={component} />)}
                             </div>
                         }
@@ -197,7 +197,7 @@ const Tools = () => {
                         {
                             horizontalCrossbars && horizontalCrossbars.length > 0 &&
                             <div>
-                                <div className="font-semibold mt-1">Travesaños horizontales</div>
+                                <div className="font-semibold mt-1 text-gray-700">Travesaños horizontales</div>
                                 {horizontalCrossbars.map((component) => <WindowComponent key={component.id} component={component} />)}
                             </div>
                         }
@@ -205,7 +205,7 @@ const Tools = () => {
                         {
                             glasses && glasses.length > 0 &&
                             <div>
-                                <div className="font-semibold mt-1">Vidrios</div>
+                                <div className="font-semibold mt-1 text-gray-700">Vidrios</div>
                                 {glasses.map((component) => <WindowComponent key={component.id} component={component} />)}
                             </div>
                         }
@@ -213,7 +213,7 @@ const Tools = () => {
 {
                             internalSides && internalSides.length > 0 &&
                             <div>
-                                <div className="font-semibold mt-1">Lados internos</div>
+                                <div className="font-semibold mt-1 text-gray-700">Lados internos</div>
                                 {internalSides.map((component) => <WindowComponent key={component.id} component={component} />)}
                             </div>
                         }
@@ -232,12 +232,12 @@ const WindowComponent = ({ component }: { component: IWindowComponent }) => {
     const selectedComponentId = useAppStore(state => state.selectedComponentId);
     const setSelectedComponentId = useAppStore(state => state.setSelectedComponentId);
 
-    let baseClass = 'p-1 rounded cursor-pointer  ';
+    let baseClass = 'p-1 rounded cursor-pointer ml-2 ';
     baseClass += selectedComponentId === component.id ? 'bg-blue-500 text-black' : 'text-gray-500 hover:bg-gray-200';
 
     return (
         <div className={baseClass} onClick={() => setSelectedComponentId(component.id)}>
             {component.name}
-        </div>
+        </div> 
     );
 }
