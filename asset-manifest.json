@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/haustek-poc/static/css/main.e0b4d233.css",
+    "main.js": "/haustek-poc/static/js/main.5b7b6966.js",
+    "static/js/787.7c1c8afb.chunk.js": "/haustek-poc/static/js/787.7c1c8afb.chunk.js",
+    "static/media/logo_mapplics.png": "/haustek-poc/static/media/logo_mapplics.24204780b3836e7247e2.png",
+    "index.html": "/haustek-poc/index.html",
+    "main.e0b4d233.css.map": "/haustek-poc/static/css/main.e0b4d233.css.map",
+    "main.5b7b6966.js.map": "/haustek-poc/static/js/main.5b7b6966.js.map",
+    "787.7c1c8afb.chunk.js.map": "/haustek-poc/static/js/787.7c1c8afb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e0b4d233.css",
+    "static/js/main.5b7b6966.js"
+  ]
+}
