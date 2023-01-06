@@ -115,18 +115,21 @@ const Tools = () => {
     const glasses = windowModel?.components.filter(c => c.type === WindowComponentType.GLASS);
 
     return (
-        <div className="h-full w-72 bg-gray-300 absolute top-0 flex flex-col items-center p-4">
+        <div className="h-full w-72 bg-gray-300 absolute top-0 flex flex-col items-center py-2 px-4 text-sm">
 
-            <img className="w-full" src={logo}/>
+            <img className="w-full" src={logo} />
 
-            <button className="btn btn-blue mt-6 w-full" onClick={() => setWindowModel(null)}>Borrar</button>
+            <div className="flex flex-row w-full mt-4">
+                <button className="btn btn-blue w-full" onClick={() => newSquareFrame(windowsHeight, windowsWidth)}>Nueva</button>
 
-            {/* <button className="btn btn-blue mt-2 w-full" onClick={() => freeDrawing()}>Dibujo libre</button> */}
+                <button className="btn btn-blue ml-4 w-full" onClick={() => setWindowModel(null)}>Borrar</button>
 
-            <button className="btn btn-blue mt-2 w-full" onClick={() => newSquareFrame(windowsHeight, windowsWidth)}>Nueva ventana</button>
+                {/* <button className="btn btn-blue mt-2 w-full" onClick={() => freeDrawing()}>Dibujo libre</button> */}
+            </div>
 
 
-            <div className="mt-6  w-full flex flex-col">
+
+            <div className="mt-2  w-full flex flex-col">
                 <label className="font-semibold">Dimensiones ventana</label>
                 <div className="flex flex-row">
                     <div className="w-full flex flex-col">
@@ -143,7 +146,7 @@ const Tools = () => {
                 </div>
             </div>
 
-            <div className="mt-4 w-full flex flex-col">
+            <div className="mt-2 w-full flex flex-col">
                 <label className="font-semibold">Alturas del marco</label>
                 <div className="flex flex-row">
                     <input className="btn w-full" type='number' min={1} max={30} value={frameHeight} onChange={onFrameHeightChange} />
@@ -151,7 +154,7 @@ const Tools = () => {
                 </div>
             </div>
 
-            <div className="mt-4 w-full flex flex-col">
+            <div className="mt-2 w-full flex flex-col">
                 <label className="font-semibold">Secciones</label>
                 <div className="flex flex-row">
                     <div className="w-full flex flex-col">
@@ -170,8 +173,8 @@ const Tools = () => {
 
             {
                 windowModel?.components && windowModel.components.length > 0 &&
-                <div className="mt-6 w-full flex flex-col overflow-y-hidden">
-                    <label className="mb-2 font-semibold w-full">Componentes</label>
+                <div className="mt-2 w-full flex flex-col overflow-y-hidden">
+                    <label className="mb-1 font-semibold w-full">Componentes</label>
 
                     <div className="flex flex-col overflow-y-auto">
                         {
@@ -179,14 +182,6 @@ const Tools = () => {
                             <div>
                                 <div className="font-semibold">Lados exteriores</div>
                                 {externalSides.map((component) => <WindowComponent key={component.id} component={component} />)}
-                            </div>
-                        }
-
-                        {
-                            internalSides && internalSides.length > 0 &&
-                            <div>
-                                <div className="font-semibold mt-1">Lados internos</div>
-                                {internalSides.map((component) => <WindowComponent key={component.id} component={component} />)}
                             </div>
                         }
 
@@ -215,6 +210,13 @@ const Tools = () => {
                             </div>
                         }
 
+{
+                            internalSides && internalSides.length > 0 &&
+                            <div>
+                                <div className="font-semibold mt-1">Lados internos</div>
+                                {internalSides.map((component) => <WindowComponent key={component.id} component={component} />)}
+                            </div>
+                        }
 
                     </div>
                 </div>
