@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/haustek-poc/static/css/main.45512ca9.css",
-    "main.js": "/haustek-poc/static/js/main.5f8e67c6.js",
+    "main.css": "/haustek-poc/static/css/main.259691ca.css",
+    "main.js": "/haustek-poc/static/js/main.49a1e834.js",
     "static/js/787.7c1c8afb.chunk.js": "/haustek-poc/static/js/787.7c1c8afb.chunk.js",
     "static/media/logo_mapplics.png": "/haustek-poc/static/media/logo_mapplics.24204780b3836e7247e2.png",
     "index.html": "/haustek-poc/index.html",
-    "main.45512ca9.css.map": "/haustek-poc/static/css/main.45512ca9.css.map",
-    "main.5f8e67c6.js.map": "/haustek-poc/static/js/main.5f8e67c6.js.map",
+    "main.259691ca.css.map": "/haustek-poc/static/css/main.259691ca.css.map",
+    "main.49a1e834.js.map": "/haustek-poc/static/js/main.49a1e834.js.map",
     "787.7c1c8afb.chunk.js.map": "/haustek-poc/static/js/787.7c1c8afb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.45512ca9.css",
-    "static/js/main.5f8e67c6.js"
+    "static/css/main.259691ca.css",
+    "static/js/main.49a1e834.js"
   ]
 }
